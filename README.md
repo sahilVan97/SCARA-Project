@@ -1,1 +1,22 @@
 # SCARA-Project
+
+Welcome to the SCARA-Project wiki!
+
+[[https://github.com/snakeyLlama/SCARA-Project/tree/master/Images/IMG_0543.JPG|alt=Prototype]]
+
+This project proposes a new method to design a Real-Time Selective Compliance Articulated Robot Arm (SCARA) controller. SCARA is a common type of Robot in the manufacturing industry used mainly for pick and place tasks. The mechanical simplicity of this type of robot paired with the high speed and low-cost solutions makes it one of the most popular industrial robots. Real time implementation of control is necessary to react to dynamic environment. 
+
+The SCARA controller designed and implemented as a part of this project is designed keeping robot as the main control objective, along with IIOT as the main information processing technology. The controller consists of two main parts, traditional robot control and IIOT functionality for modern control supporting the industry 4.0 initiative. The traditional control consists of a central controller and a Human Machine Interface (HMI) device to control the robot. The central controller calculates trajectories, Kinematics and some Dynamics. The HMI device is used to provide inputs for operators to move the robot. The IIOT technology is used to upload data to a cloud service to be processed further. It is also used to control the robot using an interface that communicates with the cloud service to send commands to the robot.
+
+[[https://github.com/snakeyLlama/SCARA-Project/tree/master/Images/PCB_2d.PNG|alt=Latest PCB]]
+
+A PCB was developed for the SCARA robot controller. The development was done on Altium Designer 2019 [12]. Version 1 of the PCB consisted of a power regulator, Nucleo 64 board, 5 LEDs, MicroSD card reader, 6 pulse and direction connectors and 2 I/O connectors. The SCARA robot controller designed for this project is named ‘Sierra’. The core aim was to create a robot controller with onboard I/O and pulse and direction output that operates at 24V. On further research a second microcontroller was  added. This microcontroller is required to be capable of connecting to the internet.
+
+[[https://github.com/snakeyLlama/SCARA-Project/tree/master/Images/IMG_0540.JPG|alt=Electrical Cabinet]]
+
+For the development of a cabinet for this project, a generic steel cabinet was used. Holes were drilled into the side panel to fit an Emergency stop (ESTOP) button, a Start/Stop push button and a passthrough for wires to the robot.
+
+Testing suggests that the robot is moving in joint and linear mode smoothly. While the cabinet is turned on, data is being continuously uploaded to a cloud service. The system can receive commands from a MATLAB Application from anywhere in the world. Safety critical elements like Emergency Stop also works 100% percent of the time. 
+A real-time robot controller is designed and prototyped successfully. The IIoT functionality enhances the traditional industrial robot controller and opens several possibilities in the future. The controller meets the traditional robot control requirement by operating in real-time, with onboard I/O’s, SD card and enough overhead for future developments. As stated in the Literature review section, the possibilities with IIoT are immense as it opens a door for remote debugging, online AI processing, remote control and even remote boot-loading. This project’s implementation of IIoT keeps these doors open for future work. Sierra v0.2 had enough overhead to implement advanced features stated above.
+The market size for SCARA is large and is expected to grow significantly in the next decade. Advanced features like AI data processing can be implemented as a subscription service to increase the revenue per robot by used a live subscription model. This feature can save time and money as a well-trained neural network can predict part failure for maintenance schedule.
+A vacuum system is attached and wired to the robot to display its capability to perform a pick and place task. This is a showcase of a typical application. IIoT can further enhance this application by keeping a count of number of items placed and a global speed override for line managers to change from anywhere in the world. For example, a manufacturing company receives a contract to a large quantity of product within a small timeframe. The line manager can remotely increase the production speed to meet the contract. Without IIoT and industry 4.0, an engineer/operator will have to manually increase the speed of each machine and possibly stop production to keep everything in sync.
